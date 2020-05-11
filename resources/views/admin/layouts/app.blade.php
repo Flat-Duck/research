@@ -194,20 +194,6 @@
                 @yield('content')
             </section>
         </div>
-
-        {{--  Footer  --}}
-        <footer class="main-footer">
-            <div class="pull-right hidden-xs">
-                Anything you want
-            </div>
-
-            <strong>
-                Created with
-                <i class="fa fa-heart"></i>
-                by
-                <a href="https://laravelfactory.com" target="_blank">Laravel Factory</a>.
-            </strong>
-        </footer>
     </div>
 
     <script src="{{ mix('/js/admin/vendor.js') }}"></script>
