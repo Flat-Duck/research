@@ -199,13 +199,38 @@
     <script src="{{ mix('/js/admin/vendor.js') }}"></script>
     <script src="{{ mix('/js/admin/app.js') }}"></script>
 
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.print.min.js"></script>
+
     @if (session('message'))
+    <script>
+        showNotice("{{ session('type') }}", "{{ session('message') }}");
+    </script>
+    @endif
+    <script>
+        $(document).ready(function () {
+                // $('#table').DataTable();
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+            $(document).ready(function() {
+                $('#table').DataTable( {
+                dom: 'Bfrtip',
+                buttons: [
+                'print'
+                ]
+                } );
+                } );
+    </script>
+
+    {{-- @if (session('message'))
         <script>
             showNotice("{{ session('type') }}", "{{ session('message') }}");
         </script>
-    @endif
+    @endif --}}
 
     {{-- You can put page wise javascript in scripts section --}}
-    @stack('scripts')
+    @yield('scripts')
 </body>
 </html>

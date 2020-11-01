@@ -15,11 +15,8 @@ class Teacher extends Model
      * @var array
      */
     public static $genderOptions = [
-        1 => 'Gender option 1',
-        2 => 'Gender option 2',
-        3 => 'Gender option 3',
-        4 => 'Gender option 4',
-        5 => 'Gender option 5',
+        1 => 'ذكر',
+        2 => 'أنثى',
     ];
 
     /**

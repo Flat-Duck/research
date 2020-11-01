@@ -17,15 +17,14 @@ class CreatePapersTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('description');
-            $table->boolean('type');
-            $table->boolean('published_at');
-            $table->boolean('publish_place');
             $table->integer('pages');
             $table->integer('references');
             $table->integer('college_id')->unsigned()->index();
             $table->integer('department_id')->unsigned()->index();
-            $table->integer('magazine_id')->unsigned()->index();
-            $table->integer('conference_id')->unsigned()->index();
+            $table->integer('magazine_id')->nullable()->unsigned()->index();
+            $table->integer('conference_id')->nullable()->unsigned()->index();
+       //   $table->string('publish_place');
+            $table->timestamp('published_at');
             $table->timestamps();
             $table->softDeletes();
             

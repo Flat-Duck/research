@@ -55,27 +55,15 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="checkbox-inline">
-                            <input type="hidden" name="published_at" value="0">
-                            <input type="checkbox"
-                                name="published_at"
-                                value="1"
-                                {{ old('published_at', $paper->published_at) == 1 ? 'checked' : '' }}
-                            >
-                                Published At
-                        </label>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="checkbox-inline">
-                            <input type="hidden" name="publish_place" value="0">
-                            <input type="checkbox"
-                                name="publish_place"
-                                value="1"
-                                {{ old('publish_place', $paper->publish_place) == 1 ? 'checked' : '' }}
-                            >
-                                Publish Place
-                        </label>
+                        <label for="published_at">Published At</label>
+                        <input type="date"
+                            class="form-control"
+                            name="published_at"
+                            required
+                            placeholder="published_at"
+                            value="{{ old('published_at', $paper->published_at) }}"
+                            id="published_at"
+                        >
                     </div>
 
                     <div class="form-group">

@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 // Admin routes
 Route::name('admin.')->prefix('admin')->namespace('Admin')->group(function () {
@@ -64,4 +62,13 @@ Route::name('admin.')->prefix('admin')->namespace('Admin')->group(function () {
         // Logout
         Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
     });
+});
+
+ Route::get('/search', 'SearchController@search')->name('search');
+ Route::get('/', 'SearchController@index')->name('result');
+
+
+
+Route::get('/result', function () {
+    return view('result');
 });
