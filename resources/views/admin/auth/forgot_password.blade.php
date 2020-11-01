@@ -15,7 +15,7 @@
         @csrf
 
         <div class="form-group has-feedback">
-            <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+            <input type="email" name="email" class="form-control" placeholder="البريد الإلكتروني address" required autofocus>
             <span class="fa fa-envelope form-control-feedback"></span>
         </div>
 

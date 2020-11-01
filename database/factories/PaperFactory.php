@@ -6,9 +6,9 @@ $factory->define(App\Paper::class, function (Faker $faker) {
     return [
         'title' => $faker->word(),
         'description' => $faker->paragraph(),
-        'type' => $faker->numberBetween(1, 5),
-        'published_at' => $faker->boolean(),
-        'publish_place' => $faker->boolean(),
+       // 'type' => $faker->numberBetween(1, 5),
+        'published_at' => $faker->date(),
+       // 'publish_place' => $faker->boolean(),
         'pages' => $faker->randomDigitNotNull(),
         'references' => $faker->randomDigitNotNull(),
         'college_id' => function () {

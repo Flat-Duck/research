@@ -1,13 +1,13 @@
 @extends('admin.layouts.app', ['page' => 'paper'])
 
-@section('title', 'Edit Paper')
+@section('title', 'Edit ورقة بحثية')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Edit Paper</h3>
+                <h3 class="box-title">Edit ورقة بحثية</h3>
             </div>
 
             <form role="form" method="POST" enctype="multipart/form-data" action="{{ route('admin.papers.update', ['paper' => $paper->id]) }}">
@@ -16,28 +16,28 @@
 
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="title">Title</label>
+                        <label for="title">العنوان</label>
                         <input type="text"
                             class="form-control"
                             name="title"
                             required
-                            placeholder="Title"
+                            placeholder="العنوان"
                             value="{{ old('title', $paper->title) }}"
                             id="title"
                         >
                     </div>
 
                     <div class="form-group">
-                        <label for="description">Description</label>
+                        <label for="description">الوصف</label>
                         <textarea class="form-control"
                             name="description"
                             id="description"
                             required
-                            placeholder="Description"
+                            placeholder="الوصف"
                         >{{ old('description', $paper->description) }}</textarea>
                     </div>
 
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="type">Type</label>
                         <select class="form-control"
                             name="type"
@@ -52,10 +52,10 @@
                                 </option>
                             @endforeach
                         </select>
-                    </div>
+                    </div> --}}
 
                     <div class="form-group">
-                        <label for="published_at">Published At</label>
+                        <label for="published_at">تاريخ النشر</label>
                         <input type="date"
                             class="form-control"
                             name="published_at"
@@ -67,12 +67,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="pages">Pages</label>
+                        <label for="pages">عدد الصفحات</label>
                         <input type="number"
                             class="form-control"
                             name="pages"
                             required
-                            placeholder="Pages"
+                            placeholder="عدد الصفحات"
                             value="{{ old('pages', $paper->pages) }}"
                             step="any"
                             id="pages"
@@ -80,12 +80,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="references">References</label>
+                        <label for="references">المراجع</label>
                         <input type="number"
                             class="form-control"
                             name="references"
                             required
-                            placeholder="References"
+                            placeholder="المراجع"
                             value="{{ old('references', $paper->references) }}"
                             step="any"
                             id="references"
@@ -109,7 +109,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="teachers">Teacher</label>
+                        <label for="teachers">أستاذ</label>
                         <select class="form-control"
                             name="teachers[]"
                             required
@@ -127,7 +127,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="college-id">College</label>
+                        <label for="college-id">الكلية</label>
                         <select class="form-control"
                             name="college_id"
                             required
@@ -144,7 +144,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="department-id">Department</label>
+                        <label for="department-id">القسم</label>
                         <select class="form-control"
                             name="department_id"
                             required
@@ -161,7 +161,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="magazine-id">Magazine</label>
+                        <label for="magazine-id">مجلة</label>
                         <select class="form-control"
                             name="magazine_id"
                             required
@@ -178,7 +178,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="conference-id">Conference</label>
+                        <label for="conference-id">مؤتمر</label>
                         <select class="form-control"
                             name="conference_id"
                             required

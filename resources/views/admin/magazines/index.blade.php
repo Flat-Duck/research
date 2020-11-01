@@ -1,26 +1,26 @@
 @extends('admin.layouts.app', ['page' => 'magazine'])
 
-@section('title', 'Magazines')
+@section('title', 'المجلات')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Magazines</h3>
+                <h3 class="box-title">المجلات</h3>
 
                 <a class="pull-right btn btn-sm btn-primary" href="{{ route('admin.magazines.create') }}">
-                    Add New
+                    إضافة جديد
                 </a>
             </div>
             <div class="box-body">
                 <table class="table table-bordered">
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Folder</th>
-                        <th>Number</th>
-                        <th>Action</th>
+                        <th>الإسم</th>
+                        <th>المجلد</th>
+                        <th>عدد</th>
+                        <th>العمليات</th>
                     </tr>
 
                     @forelse ($magazines as $magazine)

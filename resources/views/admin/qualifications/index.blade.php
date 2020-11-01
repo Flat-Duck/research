@@ -1,24 +1,24 @@
 @extends('admin.layouts.app', ['page' => 'qualification'])
 
-@section('title', 'Qualifications')
+@section('title', 'المؤهلات')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Qualifications</h3>
+                <h3 class="box-title">المؤهلات</h3>
 
                 <a class="pull-right btn btn-sm btn-primary" href="{{ route('admin.qualifications.create') }}">
-                    Add New
+                    إضافة جديد
                 </a>
             </div>
             <div class="box-body">
                 <table class="table table-bordered">
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Action</th>
+                        <th>الإسم</th>
+                        <th>العمليات</th>
                     </tr>
 
                     @forelse ($qualifications as $qualification)

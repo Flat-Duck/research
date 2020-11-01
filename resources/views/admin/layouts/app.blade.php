@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body dir="rtl" class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
         {{-- Header --}}
         <header class="main-header">
@@ -102,70 +102,70 @@
                     <li {{ $page == 'teacher' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.teachers.index') }}">
                             <i class="fa fa-arrow-right"></i>
-                            <span>Teachers</span>
+                            <span>أعضاء هيئة التدريس</span>
                         </a>
                     </li>
 
                     <li {{ $page == 'department' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.departments.index') }}">
                             <i class="fa fa-arrow-right"></i>
-                            <span>Departments</span>
+                            <span>الاقسام</span>
                         </a>
                     </li>
 
                     <li {{ $page == 'ad' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.ads.index') }}">
                             <i class="fa fa-arrow-right"></i>
-                            <span>Ads</span>
+                            <span>الاعلانات</span>
                         </a>
                     </li>
 
                     <li {{ $page == 'paper' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.papers.index') }}">
                             <i class="fa fa-arrow-right"></i>
-                            <span>Papers</span>
+                            <span>الاوراق البحثية</span>
                         </a>
                     </li>
 
                     <li {{ $page == 'nationality' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.nationalities.index') }}">
                             <i class="fa fa-arrow-right"></i>
-                            <span>Nationalities</span>
+                            <span>الجنسيات</span>
                         </a>
                     </li>
 
                     <li {{ $page == 'college' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.colleges.index') }}">
                             <i class="fa fa-arrow-right"></i>
-                            <span>Colleges</span>
+                            <span>الكليات</span>
                         </a>
                     </li>
 
                     <li {{ $page == 'classification' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.classifications.index') }}">
                             <i class="fa fa-arrow-right"></i>
-                            <span>Classifications</span>
+                            <span>التصنيفات</span>
                         </a>
                     </li>
 
                     <li {{ $page == 'qualification' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.qualifications.index') }}">
                             <i class="fa fa-arrow-right"></i>
-                            <span>Qualifications</span>
+                            <span>المؤهلات</span>
                         </a>
                     </li>
 
                     <li {{ $page == 'magazine' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.magazines.index') }}">
                             <i class="fa fa-arrow-right"></i>
-                            <span>Magazines</span>
+                            <span>المجلات</span>
                         </a>
                     </li>
 
                     <li {{ $page == 'conference' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.conferences.index') }}">
                             <i class="fa fa-arrow-right"></i>
-                            <span>Conferences</span>
+                            <span>المؤتمرات</span>
                         </a>
                     </li>
                 </ul>

@@ -16,34 +16,34 @@
 
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="title">Title</label>
+                        <label for="title">العنوان</label>
                         <input type="text"
                             class="form-control"
                             name="title"
                             required
-                            placeholder="Title"
+                            placeholder="العنوان"
                             value="{{ old('title', $ad->title) }}"
                             id="title"
                         >
                     </div>
 
                     <div class="form-group">
-                        <label for="description">Description</label>
+                        <label for="description">الوصف</label>
                         <textarea class="form-control"
                             name="description"
                             id="description"
                             required
-                            placeholder="Description"
+                            placeholder="الوصف"
                         >{{ old('description', $ad->description) }}</textarea>
                     </div>
 
                     <div class="form-group">
-                        <label for="date">Date</label>
+                        <label for="date">التاريخ</label>
                         <input type="date"
                             class="form-control"
                             name="date"
                             required
-                            placeholder="Date"
+                            placeholder="التاريخ"
                             value="{{ old('date', $ad->date) }}"
                             id="date"
                         >
@@ -57,7 +57,7 @@
                                 value="1"
                                 {{ old('active', $ad->active) == 1 ? 'checked' : '' }}
                             >
-                                Active
+                                مفعل
                         </label>
                     </div>
                 </div>

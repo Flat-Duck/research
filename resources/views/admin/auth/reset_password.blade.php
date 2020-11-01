@@ -14,7 +14,7 @@
                 name="email"
                 class="form-control"
                 value="{{ $email ?? old('email') }}"
-                placeholder="Email address"
+                placeholder="البريد الإلكتروني address"
                 required
                 autofocus
             >

@@ -1,35 +1,35 @@
 @extends('admin.layouts.app', ['page' => 'paper'])
 
-@section('title', 'Papers')
+@section('title', 'الاوراق البحثية')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Papers</h3>
+                <h3 class="box-title">الاوراق البحثية</h3>
 
                 <a class="pull-right btn btn-sm btn-primary" href="{{ route('admin.papers.create') }}">
-                    Add New
+                    إضافة جديد
                 </a>
             </div>
             <div class="box-body">
                 <table class="table table-bordered">
                     <tr>
                         <th>#</th>
-                        <th>Title</th>
-                        <th>Type</th>
-                        <th>Pages</th>
-                        <th>References</th>
-                        <th>College</th>
-                        <th>Action</th>
+                        <th>العنوان</th>
+                        {{-- <th>Type</th> --}}
+                        <th>عدد الصفحات</th>
+                        <th>المراجع</th>
+                        <th>الكلية</th>
+                        <th>العمليات</th>
                     </tr>
 
                     @forelse ($papers as $paper)
                         <tr>
                             <td>{{ $paper->id }}</td>
                             <td>{{ $paper->title }}</td>
-                            <td>{{ $paper->getType() }}</td>
+                            {{-- <td>{{ $paper->getType() }}</td> --}}
                             <td>{{ $paper->pages }}</td>
                             <td>{{ $paper->references }}</td>
                             <td>{{ $paper->college->name }}</td>

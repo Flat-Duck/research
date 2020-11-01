@@ -1,13 +1,13 @@
 @extends('admin.layouts.app', ['page' => 'college'])
 
-@section('title', 'Add New College')
+@section('title', 'إضافة جديد الكلية')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Add New College</h3>
+                <h3 class="box-title">إضافة جديد الكلية</h3>
             </div>
 
             <form role="form" method="POST" action="{{ route('admin.colleges.store') }}">
@@ -15,19 +15,19 @@
 
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">الإسم</label>
                         <input type="text"
                             class="form-control"
                             name="name"
                             required
-                            placeholder="Name"
+                            placeholder="الإسم"
                             value="{{ old('name') }}"
                             id="name"
                         >
                     </div>
 
                     <div class="form-group">
-                        <label for="departments">Department</label>
+                        <label for="departments">القسم</label>
                         <select class="form-control"
                             name="departments[]"
                             required

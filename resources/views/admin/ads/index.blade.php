@@ -1,25 +1,25 @@
 @extends('admin.layouts.app', ['page' => 'ad'])
 
-@section('title', 'Ads')
+@section('title', 'الاعلانات')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Ads</h3>
+                <h3 class="box-title">الاعلانات</h3>
 
                 <a class="pull-right btn btn-sm btn-primary" href="{{ route('admin.ads.create') }}">
-                    Add New
+                    إضافة جديد
                 </a>
             </div>
             <div class="box-body">
                 <table class="table table-bordered">
                     <tr>
                         <th>#</th>
-                        <th>Title</th>
-                        <th>Date</th>
-                        <th>Action</th>
+                        <th>العنوان</th>
+                        <th>التاريخ</th>
+                        <th>العمليات</th>
                     </tr>
 
                     @forelse ($ads as $ad)

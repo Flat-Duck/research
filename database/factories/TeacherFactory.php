@@ -5,7 +5,7 @@ use Faker\Generator as Faker;
 $factory->define(App\Teacher::class, function (Faker $faker) {
     return [
         'name' => $faker->name(),
-        'gender' => $faker->numberBetween(1, 5),
+        'gender' => $faker->numberBetween(1, 2),
         'phone' => $faker->phoneNumber(),
         'email' => $faker->safeEmail(),
         'qualification_id' => function () {

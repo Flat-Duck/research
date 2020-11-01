@@ -1,13 +1,13 @@
 @extends('admin.layouts.app', ['page' => 'magazine'])
 
-@section('title', 'Edit Magazine')
+@section('title', 'Edit مجلة')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Edit Magazine</h3>
+                <h3 class="box-title">Edit مجلة</h3>
             </div>
 
             <form role="form" method="POST" action="{{ route('admin.magazines.update', ['magazine' => $magazine->id]) }}">
@@ -16,36 +16,36 @@
 
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">الإسم</label>
                         <input type="text"
                             class="form-control"
                             name="name"
                             required
-                            placeholder="Name"
+                            placeholder="الإسم"
                             value="{{ old('name', $magazine->name) }}"
                             id="name"
                         >
                     </div>
 
                     <div class="form-group">
-                        <label for="folder">Folder</label>
+                        <label for="folder">المجلد</label>
                         <input type="text"
                             class="form-control"
                             name="folder"
                             required
-                            placeholder="Folder"
+                            placeholder="المجلد"
                             value="{{ old('folder', $magazine->folder) }}"
                             id="folder"
                         >
                     </div>
 
                     <div class="form-group">
-                        <label for="number">Number</label>
+                        <label for="number">عدد</label>
                         <input type="text"
                             class="form-control"
                             name="number"
                             required
-                            placeholder="Number"
+                            placeholder="عدد"
                             value="{{ old('number', $magazine->number) }}"
                             id="number"
                         >

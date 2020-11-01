@@ -1,13 +1,13 @@
 @extends('admin.layouts.app', ['page' => 'nationality'])
 
-@section('title', 'Edit Nationality')
+@section('title', 'Edit الجنسية')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Edit Nationality</h3>
+                <h3 class="box-title">Edit الجنسية</h3>
             </div>
 
             <form role="form" method="POST" action="{{ route('admin.nationalities.update', ['nationality' => $nationality->id]) }}">
@@ -16,12 +16,12 @@
 
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">الإسم</label>
                         <input type="text"
                             class="form-control"
                             name="name"
                             required
-                            placeholder="Name"
+                            placeholder="الإسم"
                             value="{{ old('name', $nationality->name) }}"
                             id="name"
                         >
