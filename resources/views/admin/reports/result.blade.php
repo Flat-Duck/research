@@ -50,16 +50,16 @@
         #
     </div>
     <div class="col-1-10 panel">
-        اسم المسجد
+        عنوان ورقة البحث
     </div>
     <div class="col-1-52 panel">
-        العنوان
+        تصنيف ورقة البحث
     </div>
     <div class="col-1-10 panel">
-        الشارع
+        تاريخ النشر
     </div>
     <div class="col-1-10 panel">
-        تاريخ الانشاء
+         تحميل
     </div>
 </div>
 @endsection
