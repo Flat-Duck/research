@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ config('app.name') }} - @yield('title')</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
+<link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link href="{{ mix('/css/admin/vendor.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/admin/app.css') }}" rel="stylesheet">
 
@@ -20,7 +23,8 @@
     <![endif]-->
 
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
 <body dir="rtl" class="hold-transition skin-blue sidebar-mini">
@@ -52,7 +56,8 @@
 
                             <ul class="dropdown-menu">
                                 <li class="user-header">
-                                    <img src="{{ asset('images/admin-avatar.png') }}" class="img-circle" alt="Admin avatar">
+                                    <img src="{{ asset('images/admin-avatar.png') }}" class="img-circle"
+                                        alt="Admin avatar">
 
                                     <p>{{ Auth::guard('admin')->user()->name }}</p>
                                 </li>
@@ -64,7 +69,8 @@
                                         </a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="{{ route('admin.logout') }}" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="{{ route('admin.logout') }}" class="btn btn-default btn-flat">Sign
+                                            out</a>
                                     </div>
                                 </li>
                             </ul>
@@ -92,10 +98,16 @@
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">MENU</li>
 
-                    <li{{ $page == 'dashboard' ? ' class=active' : '' }}>
+                    <li {{ $page == 'dashboard' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.dashboard') }}">
                             <i class="fa fa-building"></i>
                             <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li {{ $page == 'admins' ? ' class=active' : '' }}>
+                        <a href="{{ route('admin.admins.index') }}">
+                            <i class="fa fa-building"></i>
+                            <span>إدارة المستخدمين</span>
                         </a>
                     </li>
 
@@ -168,6 +180,12 @@
                             <span>المؤتمرات</span>
                         </a>
                     </li>
+                    <li {{ $page == 'report' ? ' class=active' : '' }}>
+                        <a href="{{ route('admin.reports.index') }}">
+                            <i class="fa fa-arrow-right"></i>
+                            <span>التقارير</span>
+                        </a>
+                    </li>
                 </ul>
             </section>
         </aside>
@@ -184,11 +202,11 @@
             {{--  Page Content  --}}
             <section class="content container-fluid">
                 @if ($errors->all())
-                    <ul class="alert alert-danger">
-                        @foreach ($errors->all() as $message)
-                            <li>{{ $message }}</li>
-                        @endforeach
-                    </ul>
+                <ul class="alert alert-danger">
+                    @foreach ($errors->all() as $message)
+                    <li>{{ $message }}</li>
+                    @endforeach
+                </ul>
                 @endif
 
                 @yield('content')
@@ -227,10 +245,11 @@
     {{-- @if (session('message'))
         <script>
             showNotice("{{ session('type') }}", "{{ session('message') }}");
-        </script>
+    </script>
     @endif --}}
 
     {{-- You can put page wise javascript in scripts section --}}
     @yield('scripts')
 </body>
+
 </html>

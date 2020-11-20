@@ -22,6 +22,8 @@
                         <th>رقم الهاتف</th>
                         <th>البريد الإلكتروني</th>
                         <th>المؤهل</th>
+                        <th>الكلية</th>
+                        <th>القسم</th>
                         <th>العمليات</th>
                     </tr>
 
@@ -33,6 +35,8 @@
                             <td>{{ $teacher->phone }}</td>
                             <td>{{ $teacher->email }}</td>
                             <td>{{ $teacher->qualification->name }}</td>
+                            <td>{{ $teacher->college->name }}</td>
+                            <td>{{ $teacher->department->name }}</td>
                             <td>
                                 <a href="{{ route('admin.teachers.edit', ['teacher' => $teacher->id]) }}">
                                     <i class="fa fa-pencil-square-o"></i>

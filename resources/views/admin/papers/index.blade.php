@@ -18,10 +18,13 @@
                     <tr>
                         <th>#</th>
                         <th>العنوان</th>
-                        {{-- <th>Type</th> --}}
+                        <th>الوصف</th>
+                        <th>تاريخ النشر</th>
                         <th>عدد الصفحات</th>
-                        <th>المراجع</th>
-                        <th>الكلية</th>
+                        <th>عدد المراجع</th>
+                        <th>اسم الاستاذ</th>
+                        <th>مكان النشر </th>
+                        <th>التصنيف</th>
                         <th>العمليات</th>
                     </tr>
 
@@ -29,9 +32,13 @@
                         <tr>
                             <td>{{ $paper->id }}</td>
                             <td>{{ $paper->title }}</td>
-                            {{-- <td>{{ $paper->getType() }}</td> --}}
+                            <td>{{ $paper->description }}</td>
+                            <td>{{ $paper->published_at }}</td>
                             <td>{{ $paper->pages }}</td>
                             <td>{{ $paper->references }}</td>
+                            {{-- <td>{{ $paper->teachers->first()->name }}</td> --}}
+                            <td>{{ $paper->title }}</td>
+                            {{-- <td>{{ $paper->getType() }}</td> --}}
                             <td>{{ $paper->college->name }}</td>
                             <td>
                                 <a href="{{ route('admin.papers.edit', ['paper' => $paper->id]) }}">

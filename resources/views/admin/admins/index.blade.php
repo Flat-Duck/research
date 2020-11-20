@@ -1,15 +1,15 @@
 @extends('admin.layouts.app', ['page' => 'ad'])
 
-@section('title', 'الاعلانات')
+@section('title', 'إدارة المستخدمين')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">الاعلانات</h3>
+                <h3 class="box-title">إدارة المستخدمين</h3>
 
-                <a class="pull-right btn btn-sm btn-primary" href="{{ route('admin.ads.create') }}">
+                <a class="pull-right btn btn-sm btn-primary" href="{{ route('admin.admins.create') }}">
                     إضافة جديد
                 </a>
             </div>
@@ -17,27 +17,33 @@
                 <table class="table table-bordered">
                     <tr>
                         <th>#</th>
-                        <th>العنوان</th>
-                        <th>الوصف</th>
-                        <th>التاريخ</th>
-                        <th>حالة الاعلان</th>
+                        <th>الاسم </th>
+                        <th>اسم المستخدم</th>
+                        <th>البريد الالكتروني</th>
+                        <th>حالة المستخدم</th>
                         <th>العمليات</th>
                     </tr>
 
-                    @forelse ($ads as $ad)
+                    @forelse ($admins as $k=> $admin)
                         <tr>
-                            <td>{{ $ad->id }}</td>
-                            <td>{{ $ad->title }}</td>
-                            <td>{{ $ad->description }}</td>
-                            <td>{{ $ad->date }}</td>
-                            <td>{{ $ad->active }}</td>
+                            <td>{{ $k+1 }}</td>
+                            <td>{{ $admin->name }}</td>
+                            <td>{{ $admin->username }}</td>
+                            <td>{{ $admin->email }}</td>
+                            {{-- <td>{{ $admin->active }}</td> --}}
+                            @if ($admin->active)
+                <td><span class="badge bg-green"> غير موقوف</span></td>
+                
+                @else
+                <td><span class="badge bg-red">موقوف</span></td>
+                @endif 
                       
                             <td>
-                                <a href="{{ route('admin.ads.edit', ['ad' => $ad->id]) }}">
+                                <a href="{{ route('admin.admins.edit', ['admin' => $admin->id]) }}">
                                     <i class="fa fa-pencil-square-o"></i>
                                 </a>
 
-                                <form action="{{ route('admin.ads.destroy', ['ad' => $ad->id]) }}"
+                                <form action="{{ route('admin.admins.destroy', ['admin' => $admin->id]) }}"
                                     method="POST"
                                     class="inline pointer"
                                 >
@@ -59,7 +65,7 @@
             </div>
 
             <div class="box-footer clearfix">
-                {{ $ads->links('vendor.pagination.default') }}
+                {{ $admins->links('vendor.pagination.default') }}
             </div>
         </div>
     </div>

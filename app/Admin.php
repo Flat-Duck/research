@@ -61,6 +61,32 @@ class Admin extends Authenticatable
             'email' => 'required|email|max:255',
         ];
     }
+   
+   
+    /**
+     * Returns the paginated list of resources
+     *
+     * @return \Illuminate\Pagination\Paginator
+     **/
+    public static function getList()
+    {
+        return static::paginate(10);
+    }
+
+        /**
+     * Validation rules
+     *
+     * @return array
+     **/
+    public static function validationRules($id = null)
+    {
+        return [
+            'name' => 'required|string',
+            'username' => 'required|string|unique:admins,username,'.$id,
+            'email' => 'required|email|unique:admins,email,'.$id,
+            'password' => 'string|nullable',
+        ];
+    }
 
     /**
      * Password update validation rules

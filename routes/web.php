@@ -35,7 +35,10 @@ Route::name('admin.')->prefix('admin')->namespace('Admin')->group(function () {
         Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
 
         Route::resource('teachers', 'TeacherController');
+        Route::resource('admins', 'AdminsController');
 
+        Route::get('/reports', 'RerportController@index')->name('reports.index');
+        Route::post('/reports/papers', 'RerportController@papers')->name('report1');
         Route::resource('departments', 'DepartmentController');
 
         Route::resource('ads', 'AdController');
@@ -65,10 +68,15 @@ Route::name('admin.')->prefix('admin')->namespace('Admin')->group(function () {
 });
 
  Route::get('/search', 'SearchController@search')->name('search');
- Route::get('/', 'SearchController@index')->name('result');
+ Route::get('/', 'MainController@index')->name('home');
 
 
 
-Route::get('/result', function () {
-    return view('result');
-});
+// Route::get('/result', function () {
+//     return view('result');
+// });
+
+
+// Route::get('/', function () {
+//     return view('main');
+// });
