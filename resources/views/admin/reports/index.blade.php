@@ -7,13 +7,13 @@
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">تقرير المساجد في منطقة</h3>
+                <h3 class="box-title">تقرير الاوراق البحثية</h3>
             </div>
             <div class="box-body">
                 <form target="_blank" class="form-inline" role="form" method="POST" action="{{ route('admin.report1') }}">
                     @csrf
                     <div class="form-group mx-sm-3 mb-2">
-                        <label for="city" class="sr-only">ادخل اسم المنطقة</label>
+                        <label for="city" class="sr-only">اختار اسم الشخص</label>
                         <select class="livesearch form-control" name="id">
                             @foreach ($teachers as $teacher)
                             <option value="{{ $teacher->id }}" {{ old('teachers') && $teacher->id, old('teachers') ? 'selected' : '' }}>

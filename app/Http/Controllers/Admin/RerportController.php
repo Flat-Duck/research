@@ -25,7 +25,7 @@ class RerportController extends Controller
         $teacher = Teacher::find(request()->id);  
         $papers = $teacher->papers;
         
-        dd($teacher->papers);
-        return view("admin.reports.mosques", compact('teacher','papers'));
+      //  dd($teacher->papers);
+        return view("admin.reports.result", compact('teacher','papers'));
     }
 }
