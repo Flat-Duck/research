@@ -193,11 +193,11 @@
 
 <body dir="rtl">
     <header>
-        <div class="logo">
+        {{-- <div class="logo">
             <h1> الهيئة العامة للاوقاف</h1>
             <h3>{{\Auth::user()->teacher->mosque->name}}</h3>
             <h5>{{$reportName}}</h5>
-        </div>
+        </div> --}}
         <div class="invoiceNbr">
             تاريخ: {{Carbon\Carbon::now()}}
         </div>
