@@ -118,12 +118,12 @@
                         </a>
                     </li>
 
-                    <li {{ $page == 'department' ? ' class=active' : '' }}>
+                    {{-- <li {{ $page == 'department' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.departments.index') }}">
                             <i class="fa fa-arrow-right"></i>
                             <span>الاقسام</span>
                         </a>
-                    </li>
+                    </li> --}}
 
                     <li {{ $page == 'ad' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.ads.index') }}">
@@ -139,19 +139,19 @@
                         </a>
                     </li>
 
-                    <li {{ $page == 'nationality' ? ' class=active' : '' }}>
+                    {{-- <li {{ $page == 'nationality' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.nationalities.index') }}">
                             <i class="fa fa-arrow-right"></i>
                             <span>الجنسيات</span>
                         </a>
-                    </li>
+                    </li> --}}
 
-                    <li {{ $page == 'college' ? ' class=active' : '' }}>
+                    {{-- <li {{ $page == 'college' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.colleges.index') }}">
                             <i class="fa fa-arrow-right"></i>
                             <span>الكليات</span>
                         </a>
-                    </li>
+                    </li> --}}
 
                     <li {{ $page == 'classification' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.classifications.index') }}">
@@ -160,26 +160,26 @@
                         </a>
                     </li>
 
-                    <li {{ $page == 'qualification' ? ' class=active' : '' }}>
+                    {{-- <li {{ $page == 'qualification' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.qualifications.index') }}">
                             <i class="fa fa-arrow-right"></i>
                             <span>المؤهلات</span>
                         </a>
-                    </li>
+                    </li> --}}
 
-                    <li {{ $page == 'magazine' ? ' class=active' : '' }}>
+                    {{-- <li {{ $page == 'magazine' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.magazines.index') }}">
                             <i class="fa fa-arrow-right"></i>
                             <span>المجلات</span>
                         </a>
-                    </li>
+                    </li> --}}
 
-                    <li {{ $page == 'conference' ? ' class=active' : '' }}>
+                    {{-- <li {{ $page == 'conference' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.conferences.index') }}">
                             <i class="fa fa-arrow-right"></i>
                             <span>المؤتمرات</span>
                         </a>
-                    </li>
+                    </li> --}}
                     <li {{ $page == 'report' ? ' class=active' : '' }}>
                         <a href="{{ route('admin.reports.index') }}">
                             <i class="fa fa-arrow-right"></i>
