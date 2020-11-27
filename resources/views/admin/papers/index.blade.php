@@ -28,16 +28,17 @@
                         <th>العمليات</th>
                     </tr>
 
-                    @forelse ($papers as $paper)
+                    @forelse ($papers as $k=> $paper)
                         <tr>
-                            <td>{{ $paper->id }}</td>
+                            <td>{{ $k+1 }}</td>
                             <td>{{ $paper->title }}</td>
                             <td>{{ $paper->description }}</td>
                             <td>{{ $paper->published_at }}</td>
                             <td>{{ $paper->pages }}</td>
                             <td>{{ $paper->references }}</td>
-                            {{-- <td>{{ $paper->teachers->first()->name }}</td> --}}
-                            <td>{{ $paper->title }}</td>
+                            <td>{{ is_null($paper->teachers->first())? '':$paper->teachers->first()->name }}</td>
+                            <td>{{ is_null($paper->magazine_id)?$paper->conference->name : $paper->magazine->name }}</td>
+
                             {{-- <td>{{ $paper->getType() }}</td> --}}
                             <td>{{ $paper->college->name }}</td>
                             <td>
