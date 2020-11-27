@@ -35,7 +35,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="#banner">الرئيسية</a></li>
           <li><a href="{{ route('search') }}">إبحث</a></li>
-          <li><a href="/admin/login">تسجيل الدخول</a></li>
+          <li><a href="/admin">تسجيل الدخول</a></li>
           <li><a href="#testimonials">عن الموقع</a></li>
           <li><a href="#about">من نحن</a></li>
           <li><a href="#contact">الخصوصية</a></li>
@@ -378,7 +378,7 @@ $(document).ready(function() {
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
   // Prevent default anchor click behavior
-  event.preventDefault();
+  //event.preventDefault();
 
   // Store hash
   var hash = this.hash;
