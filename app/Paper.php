@@ -110,6 +110,13 @@ class Paper extends Model implements HasMedia
     {
         return $this->belongsTo('App\Conference');
     }
+    /**
+     * Get the conference for the Paper.
+     */
+    public function classification()
+    {
+        return $this->belongsTo('App\Classification');
+    }
 
     /**
      * Get the teachers for the Paper.

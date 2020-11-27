@@ -28,16 +28,16 @@
         {{$k+1}}
     </div>
     <div class="col-1-10">
-        {{$paper->name}}
+        {{$paper->title}}
     </div>
     <div class="col-1-52">
-        {{$paper->address}}
+        {{$paper->classification->name}}
     </div>
     <div class="col-1-10">
-        {{$paper->street}}
+        {{$paper->published_at}}
     </div>
     <div class="col-1-10">
-        {{$paper->date_construction}}
+        <a href="{{ $paper->getFirstMediaUrl('attachments') }}"target="_blank">تحميل</a>
     </div>
 </div>
 @empty

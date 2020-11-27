@@ -297,7 +297,7 @@
 
         <div class="searchResults">
             <ul>
-                @foreach ($papers as $k=>$paper)
+                @foreach ($papers as $k=> $paper)
 
 
                 <div class="searchResultsItem">

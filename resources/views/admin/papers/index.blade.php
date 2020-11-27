@@ -40,7 +40,7 @@
                             <td>{{ is_null($paper->magazine_id)?$paper->conference->name : $paper->magazine->name }}</td>
 
                             {{-- <td>{{ $paper->getType() }}</td> --}}
-                            <td>{{ $paper->college->name }}</td>
+                            <td>{{ $paper->classification->name }}</td>
                             <td>
                                 <a href="{{ route('admin.papers.edit', ['paper' => $paper->id]) }}">
                                     <i class="fa fa-pencil-square-o"></i>
