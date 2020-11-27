@@ -160,6 +160,18 @@
                         </select>
                     </div>
 
+                    <div class="form-group">
+                        <label for="country">الدولة </label>
+                        <input type="number"
+                            class="form-control"
+                            name="country"
+                            required
+                            placeholder="الدولة "
+                            value="{{ old('country', $paper->country) }}"
+                            step="any"
+                            id="country"
+                        >
+                    </div>
                    
                     
                     {!! is_null($paper->magazine_id)? '<input id="NoMag" type="hidden" name="NoMag" value="0">':  '<input id="NoMag" type="hidden" name="NoMag" value="1" />' !!}

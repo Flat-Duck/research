@@ -30,7 +30,7 @@ class Paper extends Model implements HasMedia
      * @var array
      */
     protected $fillable = [
-        'title', 'description', 'type', 'published_at', 'publish_place', 'pages', 'references', 'attachments', 'college_id', 'department_id', 'magazine_id', 'conference_id'
+        'title', 'description', 'type', 'published_at', 'publish_place', 'pages', 'references', 'attachments', 'college_id', 'department_id', 'magazine_id', 'conference_id','country'
     ];
 
     /**

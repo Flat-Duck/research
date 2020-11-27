@@ -97,7 +97,18 @@
                         @endforeach
                     </select>
                 </div>
-                
+                <div class="form-group">
+                    <label for="country">الدولة </label>
+                    <input type="number"
+                        class="form-control"
+                        name="country"
+                        required
+                        placeholder="الدولة"
+                        value="{{ old('country') }}"
+                        step="any"
+                        id="country"
+                    >
+                </div>
                 <div class="form-group">
                     <label for="RMag">مجلة</label>
                     <input id="RMag" type="radio" name="myRadios" value="1" />
