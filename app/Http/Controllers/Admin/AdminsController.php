@@ -39,7 +39,7 @@ class AdminsController extends Controller
      */
     public function store()
     {
-        request()->merge(['password'=>bcrypt('password')]);
+        request()->merge(['password'=>bcrypt(request()->pass)]);
         $validatedData = request()->validate(Admin::validationRules(null));
        // dd($validatedData);
         $admin = Admin::create($validatedData);

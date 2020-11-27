@@ -50,6 +50,7 @@
                             id="username"
                         >
                     </div>
+
                 </div>
 
                 <div class="box-footer">

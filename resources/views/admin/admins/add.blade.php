@@ -49,6 +49,17 @@
                             id="username"
                         >
                     </div>
+                    <div class="form-group">
+                        <label for="password">كلمة المرور</label>
+                        <input type="password"
+                            class="form-control"
+                            name="pass"
+                            required
+                            placeholder="التاريخ"
+                            value="{{ old('password') }}"
+                            id="password"
+                        >
+                    </div>
 
                     {{-- <div class="form-group">
                         <label class="checkbox-inline">
