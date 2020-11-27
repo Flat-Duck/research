@@ -10,7 +10,7 @@
                 <h3 class="box-title">Edit ورقة بحثية</h3>
             </div>
 
-            <form role="form" method="POST" enctype="multipart/form-data" action="{{ route('admin.papers.update', ['paper' => $paper->id]) }}">
+            <form role="form" name="myForm" id="myForm" method="POST" enctype="multipart/form-data" action="{{ route('admin.papers.update', ['paper' => $paper->id]) }}">
                 @csrf
                 @method('PUT')
 
@@ -193,17 +193,109 @@
                             @endforeach
                         </select>
                     </div>
+                    
+                    {!! is_null($paper->magazine_id)? '<input id="NoMag" type="hidden" name="NoMag" value="0">':  '<input id="NoMag" type="hidden" name="NoMag" value="1" />' !!}
+                <div class="form-group">
+                    <label for="RMag">مجلة</label>
+                    <input id="RMag" type="radio" name="myRadios" value="1" />
+                    <label for="RCon">مؤتمر</label>
+                    <input id="RCon" type="radio" name="myRadios" value="2" />
+                </div>
+                <div id="DMag" class="place" style="background: red">
+
+                    <div class="form-group">
+                        <label for="magazine-id">مجلة</label>
+                        <select class="form-control" name="magazine_id"  id="magazine-id">
+                           
+                            @foreach ($magazines as $magazine)
+                            <option value="{{ $magazine->id }}"
+                                {{ old('magazine_id', $paper->magazine_id) == $magazine->id ? 'selected' : '' }}
+                            >
+                                {{ $magazine->name }}
+                            </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="folder">المجلد</label>
+                        <input type="text" class="form-control" name="folder"  placeholder="folder"
+                            value="{{ old('folder') }}" id="folder">
+                    </div>
+                    <div class="form-group">
+                        <label for="number">العدد</label>
+                        <input type="text" class="form-control" name="number"  placeholder="number"
+                            value="{{ old('number') }}" id="number">
+                    </div>
+                </div>
+                <div id="DCon" class="place" style="background: green">
+
+                    <div class="form-group">
+                        <label for="conference-id">مؤتمر</label>
+                        <select class="form-control" name="conference_id"  id="conference-id">
+                            @foreach ($conferences as $conference)
+                                <option value="{{ $conference->id }}"
+                                    {{ old('conference_id', $paper->conference_id) == $conference->id ? 'selected' : '' }}
+                                >
+                                    {{ $conference->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
                 </div>
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary">تعديل </button>
 
                     <a href="{{ route('admin.papers.index') }}" class="btn btn-default">
-                        Cancel
+                        إلغاء
                     </a>
                 </div>
             </form>
         </div>
     </div>
 </div>
+@endsection
+@section('scripts')
+<script>
+    (function() {
+        var x = document.getElementById("NoMag").value;
+
+       
+        if(x==0){
+        document.getElementById("DMag").style.display = "none"; 
+        document.getElementById("RCon").checked = true;
+        }else{
+        document.getElementById("DCon").style.display = "none"; 
+        document.getElementById("RMag").checked = true;
+        }
+    
+    
+    })();
+    var prev;
+    document.forms.myForm.addEventListener('change', function(e) {
+        if(e.target.name === 'myRadios') 
+        {
+            if(e.target.value =="1")
+            {
+                hidCon();
+            }else if(e.target.value =="2")
+            {
+                hidMag();
+            }
+        }
+    });
+
+    function hidMag() {
+        document.getElementById("DMag").style.display = "none";
+        document.getElementById("DCon").style.display = "block";
+    }
+    function hidCon() {
+        document.getElementById("DMag").style.display = "block";
+        document.getElementById("DCon").style.display = "none";
+    }
+
+</script>
+
 @endsection

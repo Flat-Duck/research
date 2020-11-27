@@ -97,19 +97,7 @@
                         @endforeach
                     </select>
                 </div>
-                <fieldset>
-                    <legend>Demo: Onchange vs. Onclick</legend>
-
-                    <p>Select your favorite mode of transportation:</p>
-
-                    <p>
-                        <label>Car: <input type="radio" name="trans" value="car"></label>
-                        <label>Bike: <input type="radio" name="trans" value="bike" checked=""></label>
-                        <label>Bus: <input type="radio" name="trans" value="bus"></label>
-                        <label>Walk: <input type="radio" name="trans" value="walk"></label>
-                    </p>
-
-                </fieldset>
+                
                 <div class="form-group">
                     <label for="RMag">مجلة</label>
                     <input id="RMag" type="radio" name="myRadios" value="1" />
