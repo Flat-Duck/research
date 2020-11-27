@@ -160,39 +160,7 @@
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label for="magazine-id">مجلة</label>
-                        <select class="form-control"
-                            name="magazine_id"
-                            required
-                            id="magazine-id"
-                        >
-                            @foreach ($magazines as $magazine)
-                                <option value="{{ $magazine->id }}"
-                                    {{ old('magazine_id', $paper->magazine_id) == $magazine->id ? 'selected' : '' }}
-                                >
-                                    {{ $magazine->name }}
-                                </option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="conference-id">مؤتمر</label>
-                        <select class="form-control"
-                            name="conference_id"
-                            required
-                            id="conference-id"
-                        >
-                            @foreach ($conferences as $conference)
-                                <option value="{{ $conference->id }}"
-                                    {{ old('conference_id', $paper->conference_id) == $conference->id ? 'selected' : '' }}
-                                >
-                                    {{ $conference->name }}
-                                </option>
-                            @endforeach
-                        </select>
-                    </div>
+                   
                     
                     {!! is_null($paper->magazine_id)? '<input id="NoMag" type="hidden" name="NoMag" value="0">':  '<input id="NoMag" type="hidden" name="NoMag" value="1" />' !!}
                 <div class="form-group">
