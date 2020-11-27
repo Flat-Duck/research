@@ -43,9 +43,9 @@ class Paper extends Model implements HasMedia
         return [
             'title' => 'required|string',
             'description' => 'required|string',
-            'type' => 'required|numeric',
-            'published_at' => 'required|boolean',
-            'publish_place' => 'required|boolean',
+           // 'type' => 'required|numeric',
+            'published_at' => 'required|date',
+           // 'publish_place' => 'required|boolean',
             'pages' => 'required|numeric',
             'references' => 'required|numeric',
             'attachments' => 'nullable|file',
