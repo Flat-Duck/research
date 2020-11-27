@@ -30,7 +30,7 @@ class Paper extends Model implements HasMedia
      * @var array
      */
     protected $fillable = [
-        'title', 'description', 'type', 'published_at', 'publish_place', 'pages', 'references', 'attachments', 'college_id', 'department_id', 'magazine_id', 'conference_id','country'
+        'title', 'description', 'type', 'published_at', 'publish_place', 'pages', 'references', 'attachments', 'college_id', 'department_id', 'magazine_id', 'conference_id','country','classification_id'
     ];
 
     /**
@@ -53,6 +53,7 @@ class Paper extends Model implements HasMedia
             'department_id' => 'required|numeric|exists:departments,id',
             'magazine_id' => 'required|numeric|exists:magazines,id',
             'conference_id' => 'required|numeric|exists:conferences,id',
+            'classification_id' => 'required|numeric|exists:classifications,id',
             'teachers' => 'required|array',
             'teachers.*' => 'required|numeric|exists:teachers,id',
         ];

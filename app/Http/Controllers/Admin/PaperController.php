@@ -8,6 +8,7 @@ use App\College;
 use App\Department;
 use App\Magazine;
 use App\Conference;
+use App\Classification;
 use App\Http\Controllers\Controller;
 
 class PaperController extends Controller
@@ -36,10 +37,11 @@ class PaperController extends Controller
         $departments = Department::all();
         $magazines = Magazine::all();
         $conferences = Conference::all();
+        $classifications = Classification::all();
 
         $typeOptions = Paper::$typeOptions;
 
-        return view('admin.papers.add', compact('typeOptions', 'teachers', 'colleges', 'departments', 'magazines', 'conferences'));
+        return view('admin.papers.add', compact('classifications', 'teachers', 'colleges', 'departments', 'magazines', 'conferences'));
     }
 
     /**
@@ -77,12 +79,13 @@ class PaperController extends Controller
         $departments = Department::all();
         $magazines = Magazine::all();
         $conferences = Conference::all();
+        $classifications = Classification::all();
 
         $paper->teachers = $paper->teachers->pluck('id')->toArray();
 
         $typeOptions = Paper::$typeOptions;
 
-        return view('admin.papers.edit', compact('paper', 'typeOptions', 'teachers', 'colleges', 'departments', 'magazines', 'conferences'));
+        return view('admin.papers.edit', compact('paper', 'classifications', 'teachers', 'colleges', 'departments', 'magazines', 'conferences'));
     }
 
     /**

@@ -36,7 +36,16 @@
                             placeholder="الوصف"
                         >{{ old('description', $paper->description) }}</textarea>
                     </div>
-
+                    <div class="form-group">
+                        <label for="classification_id">التصنيف</label>
+                        <select class="form-control" name="classification_id" required id="classification">
+                            @foreach ($classifications as $key => $classification)
+                            <option value="{{ $classification->id }}" {{ old('classification_id',$paper->classification_id) == $classification->id ? 'selected' : '' }}>
+                    {{ $classification->name }}
+                    </option>
+                    @endforeach
+                    </select>
+                </div> 
                     {{-- <div class="form-group">
                         <label for="type">Type</label>
                         <select class="form-control"
@@ -162,13 +171,13 @@
 
                     <div class="form-group">
                         <label for="country">الدولة </label>
-                        <input type="number"
+                        <input type="text"
                             class="form-control"
                             name="country"
                             required
                             placeholder="الدولة "
                             value="{{ old('country', $paper->country) }}"
-                            step="any"
+                        
                             id="country"
                         >
                     </div>

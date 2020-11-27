@@ -27,16 +27,16 @@
                             placeholder="الوصف">{{ old('description') }}</textarea>
                     </div>
 
-                    {{-- <div class="form-group">
-                        <label for="type">Type</label>
-                        <select class="form-control" name="type" required id="type">
-                            @foreach ($typeOptions as $key => $value)
-                            <option value="{{ $key }}" {{ old('type') == $key ? 'selected' : '' }}>
-                    {{ $value }}
+                    <div class="form-group">
+                        <label for="classification_id">التصنيف</label>
+                        <select class="form-control" name="classification_id" required id="classification">
+                            @foreach ($classifications as $key => $classification)
+                            <option value="{{ $classification->id }}" {{ old('classification_id') == $classification->id ? 'selected' : '' }}>
+                    {{ $classification->name }}
                     </option>
                     @endforeach
                     </select>
-                </div> --}}
+                </div> 
 
                 <div class="form-group">
                     <label for="published_at">تاريخ النشر</label>
@@ -99,13 +99,13 @@
                 </div>
                 <div class="form-group">
                     <label for="country">الدولة </label>
-                    <input type="number"
+                    <input type="text"
                         class="form-control"
                         name="country"
                         required
                         placeholder="الدولة"
                         value="{{ old('country') }}"
-                        step="any"
+                       
                         id="country"
                     >
                 </div>
