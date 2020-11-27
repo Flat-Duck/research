@@ -67,7 +67,8 @@ Route::name('admin.')->prefix('admin')->namespace('Admin')->group(function () {
     });
 });
 
- Route::get('/search', 'SearchController@search')->name('search');
+ Route::get('/search', 'SearchController@index')->name('search');
+ Route::get('/search/results', 'SearchController@search')->name('results');
  Route::get('/', 'MainController@index')->name('home');
 
 

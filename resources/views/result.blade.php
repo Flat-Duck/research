@@ -263,11 +263,11 @@
     <div class="container">
         <div class="headerSearch">
             <!--Topleft Logo-->
-            <div class="logo"><a href="../HomePage/index.html"><img
-                        src="http://img.deusm.com/informationweek/2015/09/1322015/logo_420_color_2x.png"></a>
+            <div class="logo"><a href="../"><img
+                        src="/images/logo.png"></a>
             </div>
             <!--Searchbar-->
-            <form class="searchForm" action="/search" method="GET" >
+            <form class="searchForm" action="/search/results" method="GET" >
             <input class="searchBar" name="term" type="text" value="{{$term}}">
             <select class="searchBar" style="width:200px;" data-trigger="" name="type">
                                         @foreach ($searchTypes as $k=> $type)

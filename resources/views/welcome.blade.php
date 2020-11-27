@@ -11,7 +11,7 @@
 
 <body>
     <div class="s003">
-        <form method="GET" action="/search">
+        <form method="GET" action="/search/results">
             @csrf
             <div class="inner-form">
                 <div class="input-field first-wrap">
@@ -25,10 +25,10 @@
                     </div>
                 </div>
                 <div class="input-field second-wrap">
-                    <input id="search" name="term" type="text" placeholder="Enter Keywords?" />
+                    <input id="search" name="term" type="text" placeholder="ادخل كلمات البحث" />
                 </div>
                 <div class="input-field third-wrap">
-                    <button class="btn-search" type="button">
+                    <button class="btn-search" type="submit">
                         <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas"
                             data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path fill="currentColor"

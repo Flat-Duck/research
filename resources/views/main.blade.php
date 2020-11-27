@@ -33,8 +33,8 @@
         <a class="navbar-brand" href="#"><img style="width: 100px;margin: -20px;" src="./images/logo.png" ></a> </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#banner">Home</a></li>
-          <li><a href="/search">إبحث</a></li>
+          <li class="active"><a href="#banner">الرئيسية</a></li>
+          <li><a href="{{ route('search') }}">إبحث</a></li>
           <li><a href="/admin/login">تسجيل الدخول</a></li>
           <li><a href="#testimonials">عن الموقع</a></li>
           <li><a href="#about">من نحن</a></li>
@@ -53,7 +53,7 @@
           <div class="banner-text">
             <h2>اهلا بكم في <span>الهيئة الوطنية للتعليم التقني والفني</span> </h2>
             <!-- <p>One of the most beautiful HTML5 template designed by W3Template.com</p>  -->
-            <a href="#" class="banner-button">إبحث الان</a> </div>
+            <a href="{{ route('search') }}" class="banner-button">إبحث الان</a> </div>
         </div>
       </div>
     </div>
