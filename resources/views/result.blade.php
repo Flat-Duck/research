@@ -297,17 +297,25 @@
 
         <div class="searchResults">
             <ul>
-                @foreach ($papers as $k=> $paper)
+                @forelse ($papers as $k=> $paper)
 
 
                 <div class="searchResultsItem">
-                <li><a href="#">{{$paper->title}}</a></li>
+                <li><a href="{{ $paper->getFirstMediaUrl('attachments') }}">{{$paper->title}}</a></li>
                 <p class="resultAddr">{{$paper->id}}</p>
                 <p><span>{{$paper->created_at}} </span>{{$paper->description}}</p>
                 </div>
+    
+                @empty
+ <div class="relatedSearches">
+    <hr>        
+    <h4>لا توجد نتائج</h4>
+            
+                <hr>
+            </div> 
+@endforelse
+</ul>
 
-                @endforeach
-            </ul>
 
             {{-- <div class="relatedSearches">
                 <h4>Searches related to build this webpage</h4>
