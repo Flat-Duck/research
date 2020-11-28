@@ -1,13 +1,13 @@
 @extends('admin.layouts.app', ['page' => 'ad'])
 
-@section('title', 'Edit Ad')
+@section('title', 'تعديل Ad')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Edit Ad</h3>
+                <h3 class="box-title">تعديل Ad</h3>
             </div>
 
             <form role="form" method="POST" action="{{ route('admin.ads.update', ['ad' => $ad->id]) }}">
@@ -63,10 +63,10 @@
                 </div>
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary">تعديل</button>
 
                     <a href="{{ route('admin.ads.index') }}" class="btn btn-default">
-                        Cancel
+                        إلغاء
                     </a>
                 </div>
             </form>

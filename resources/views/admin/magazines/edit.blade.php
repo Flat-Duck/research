@@ -1,13 +1,13 @@
 @extends('admin.layouts.app', ['page' => 'magazine'])
 
-@section('title', 'Edit مجلة')
+@section('title', 'تعديل مجلة')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Edit مجلة</h3>
+                <h3 class="box-title">تعديل مجلة</h3>
             </div>
 
             <form role="form" method="POST" action="{{ route('admin.magazines.update', ['magazine' => $magazine->id]) }}">
@@ -53,10 +53,10 @@
                 </div>
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary">تعديل</button>
 
                     <a href="{{ route('admin.magazines.index') }}" class="btn btn-default">
-                        Cancel
+                        إلغاء
                     </a>
                 </div>
             </form>

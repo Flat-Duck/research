@@ -1,13 +1,13 @@
 @extends('admin.layouts.app', ['page' => 'paper'])
 
-@section('title', 'Edit ورقة بحثية')
+@section('title', 'تعديل ورقة بحثية')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Edit ورقة بحثية</h3>
+                <h3 class="box-title">تعديل ورقة بحثية</h3>
             </div>
 
             <form role="form" name="myForm" id="myForm" method="POST" enctype="multipart/form-data" action="{{ route('admin.papers.update', ['paper' => $paper->id]) }}">

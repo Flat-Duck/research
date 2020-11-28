@@ -1,13 +1,13 @@
 @extends('admin.layouts.app', ['page' => 'qualification'])
 
-@section('title', 'Edit المؤهل')
+@section('title', 'تعديل المؤهل')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Edit المؤهل</h3>
+                <h3 class="box-title">تعديل المؤهل</h3>
             </div>
 
             <form role="form" method="POST" action="{{ route('admin.qualifications.update', ['qualification' => $qualification->id]) }}">
@@ -29,10 +29,10 @@
                 </div>
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary">تعديل</button>
 
                     <a href="{{ route('admin.qualifications.index') }}" class="btn btn-default">
-                        Cancel
+                        إلغاء
                     </a>
                 </div>
             </form>

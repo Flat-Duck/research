@@ -1,13 +1,13 @@
 @extends('admin.layouts.app', ['page' => 'nationality'])
 
-@section('title', 'Edit الجنسية')
+@section('title', 'تعديل الجنسية')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Edit الجنسية</h3>
+                <h3 class="box-title">تعديل الجنسية</h3>
             </div>
 
             <form role="form" method="POST" action="{{ route('admin.nationalities.update', ['nationality' => $nationality->id]) }}">
@@ -29,10 +29,10 @@
                 </div>
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary">تعديل</button>
 
                     <a href="{{ route('admin.nationalities.index') }}" class="btn btn-default">
-                        Cancel
+                        إلغاء
                     </a>
                 </div>
             </form>

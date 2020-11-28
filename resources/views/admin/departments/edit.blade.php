@@ -1,13 +1,13 @@
 @extends('admin.layouts.app', ['page' => 'department'])
 
-@section('title', 'Edit القسم')
+@section('title', 'تعديل القسم')
 
 @section('content')
 <div class="row">
     <div class="col-xs-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Edit القسم</h3>
+                <h3 class="box-title">تعديل القسم</h3>
             </div>
 
             <form role="form" method="POST" action="{{ route('admin.departments.update', ['department' => $department->id]) }}">
@@ -29,10 +29,10 @@
                 </div>
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary">تعديل</button>
 
                     <a href="{{ route('admin.departments.index') }}" class="btn btn-default">
-                        Cancel
+                        إلغاء
                     </a>
                 </div>
             </form>

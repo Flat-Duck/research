@@ -7,7 +7,7 @@
     <div class="col-md-6">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Update Profile</h3>
+                <h3 class="box-title">تعديل الملف الشخصي</h3>
             </div>
 
             <form method="post">
@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Update Profile</button>
+                    <button type="submit" class="btn btn-primary">تعديل الملف الشخصي</button>
                 </div>
             </form>
         </div>
