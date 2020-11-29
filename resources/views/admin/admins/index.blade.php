@@ -51,7 +51,13 @@
                                     @method('DELETE')
 
                                     <a onclick="if (confirm('Are you sure?')) { this.parentNode.submit() }">
-                                        <i class="fa fa-trash-o"></i>
+                                        
+                                        @if ($admin->active)
+                                        <span class="badge bg-red"><i class="fa fa-lock"></i></span>
+                                        
+                                        @else
+                                        <span class="badge bg-green"><i class="fa fa-lock"></i></span>
+                                        @endif 
                                     </a>
                                 </form>
                             </td>

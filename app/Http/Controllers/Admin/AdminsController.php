@@ -96,11 +96,11 @@ class AdminsController extends Controller
      */
     public function destroy(Admin $admin)
     {
-        $admin->delete();
+        $admin->toggleActivation();
 
         return redirect()->route('admin.admins.index')->with([
             'type' => 'success',
-            'message' => 'تم الحذف بنجاح'
+            'message' => 'تم تعديل التفعيل بنجاح'
         ]);
     }
 }

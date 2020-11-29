@@ -88,6 +88,12 @@ class Admin extends Authenticatable
         ];
     }
 
+    public function toggleActivation()
+    {
+        $this->active = !$this->active;
+        $this->save();
+    }
+
     /**
      * Password update validation rules
      *

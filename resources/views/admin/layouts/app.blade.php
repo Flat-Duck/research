@@ -8,6 +8,7 @@
     <link href="{{ mix('/css/admin/vendor.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/admin/app.css') }}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css" rel="stylesheet" />
     {{-- You can put page wise internal css style in styles section --}}
     @stack('styles')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -214,8 +215,9 @@
 
     <script type="text/javascript" src="/../js/jquery.min.js"></script>
     <script type="text/javascript" src="/../js/datatables.min.js"></script>
-    {{-- <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script> --}}
-    {{-- <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.print.min.js"></script> --}}
+    
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.print.min.js"></script>
 
     @if (session('message'))
     <script>
@@ -225,11 +227,13 @@
     <script>
         $(document).ready(function () {
          //   $('#table').DataTable();
-            $('[data-toggle="tooltip"]').tooltip();
+           // $('[data-toggle="tooltip"]').tooltip();
         });
         $(document).ready(function() {
             $('#table').DataTable( {
-                'language': {'search' : ' فلترة'},
+                // 'dom': 'Bfrtip',
+                // 'buttons': ['print'],
+                'language': {'search' : ' فلترة', 'print' : 'طباعة'},
                 'bPaginate': false,
             } );
         });
