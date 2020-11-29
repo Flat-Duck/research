@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ config('app.name') }} - @yield('title')</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link href="{{ mix('/css/admin/vendor.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/admin/app.css') }}" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     {{-- You can put page wise internal css style in styles section --}}
     @stack('styles')
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -217,10 +212,10 @@
     <script src="{{ mix('/js/admin/vendor.js') }}"></script>
     <script src="{{ mix('/js/admin/app.js') }}"></script>
 
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/datatables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="/../js/jquery.min.js"></script>
+    <script type="text/javascript" src="/../js/datatables.min.js"></script>
+    {{-- <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script> --}}
+    {{-- <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.print.min.js"></script> --}}
 
     @if (session('message'))
     <script>
@@ -229,24 +224,23 @@
     @endif
     <script>
         $(document).ready(function () {
-                // $('#table').DataTable();
-                $('[data-toggle="tooltip"]').tooltip();
-            });
-            $(document).ready(function() {
-                $('#table').DataTable( {
-                dom: 'Bfrtip',
-                buttons: [
-                'print'
-                ]
-                } );
-                } );
+         //   $('#table').DataTable();
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        $(document).ready(function() {
+            $('#table').DataTable( {
+                'language': {'search' : ' فلترة'},
+                'bPaginate': false,
+            } );
+        });
+     //   $('.dataTables_filter input').attr("placeholder", "");
     </script>
 
-    {{-- @if (session('message'))
+    @if (session('message'))
         <script>
             showNotice("{{ session('type') }}", "{{ session('message') }}");
     </script>
-    @endif --}}
+    @endif
 
     {{-- You can put page wise javascript in scripts section --}}
     @yield('scripts')
