@@ -14,8 +14,8 @@ class UpdatePapersAgainTable extends Migration
     public function up()
     {
         Schema::table('papers', function (Blueprint $table) {
-            $table->integer('classification_id')->nullable()->unsigned()->index();
-            $table->foreign('classification_id')->references('id')->on('classifications');
+          //  $table->integer('classification_id')->nullable()->unsigned()->index();
+          //  $table->foreign('classification_id')->references('id')->on('classifications');
         });
     }
 
