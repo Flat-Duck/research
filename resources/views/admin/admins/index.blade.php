@@ -39,6 +39,10 @@
                 @endif 
                       
                             <td>
+                                @if ($admin->id==auth()->guard('admin')->user()->id)
+                                 
+                                    @else
+                                 
                                 <a href="{{ route('admin.admins.edit', ['admin' => $admin->id]) }}">
                                     <i class="fa fa-pencil-square-o"></i>
                                 </a>
@@ -60,6 +64,7 @@
                                         @endif 
                                     </a>
                                 </form>
+                                @endif
                             </td>
                         </tr>
                     @empty
