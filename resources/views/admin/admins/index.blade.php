@@ -39,7 +39,7 @@
                 @endif 
                       
                             <td>
-                                @if ($admin->id==auth()->guard('admin')->user()->id)
+                                @if ($admin->id==1)
                                  
                                     @else
                                  
