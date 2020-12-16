@@ -38,6 +38,10 @@ class LoginController extends Controller
         return view('admin.auth.login');
     }
 
+    
+    protected function credentials() {
+        return array_merge(request()->only($this->username(), 'password'), ['active' => 1]);
+    }
     /**
      * username column should be used for authentication instead of email column
      *

@@ -233,7 +233,7 @@
             $('#table').DataTable( {
                 // 'dom': 'Bfrtip',
                 // 'buttons': ['print'],
-                'language': {'search' : ' فلترة', 'print' : 'طباعة'},
+                'language': {'search' : ' فلترة'},
                 'bPaginate': false,
             } );
         });
