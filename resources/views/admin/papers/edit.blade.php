@@ -111,7 +111,7 @@
                         <input type="file"
                             class="form-control"
                             name="attachments"
-                            required
+                            
                             value="{{ old('attachments', $paper->attachments) }}"
                             id="attachments"
                         >

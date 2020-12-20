@@ -131,12 +131,12 @@
 
                     <div class="form-group">
                         <label for="folder">folder</label>
-                        <input type="text" class="form-control" name="folder" required placeholder="folder"
+                        <input type="text" class="form-control" name="folder"  placeholder="folder"
                             value="{{ old('folder') }}" id="folder">
                     </div>
                     <div class="form-group">
                         <label for="number">number</label>
-                        <input type="text" class="form-control" name="number" required placeholder="number"
+                        <input type="text" class="form-control" name="number"  placeholder="number"
                             value="{{ old('number') }}" id="number">
                     </div>
                 </div>
@@ -144,7 +144,7 @@
 
                     <div class="form-group">
                         <label for="conference-id">مؤتمر</label>
-                        <select class="form-control" name="conference_id" required id="conference-id">
+                        <select class="form-control" name="conference_id"  id="conference-id">
                             @foreach ($conferences as $conference)
                             <option value="{{ $conference->id }}"
                                 {{ old('conference_id') == $conference->id ? 'selected' : '' }}>
