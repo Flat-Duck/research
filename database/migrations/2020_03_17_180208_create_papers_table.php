@@ -29,7 +29,7 @@ class CreatePapersTable extends Migration
             $table->timestamps();
             $table->softDeletes();
             
-            $table->foreign('classification_id')->references('id')->on('classificationS');
+            $table->foreign('classification_id')->references('id')->on('classifications');
             $table->foreign('college_id')->references('id')->on('colleges');
             $table->foreign('department_id')->references('id')->on('departments');
             $table->foreign('magazine_id')->references('id')->on('magazines');
