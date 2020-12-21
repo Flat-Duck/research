@@ -23,11 +23,13 @@ class CreatePapersTable extends Migration
             $table->integer('department_id')->unsigned()->index();
             $table->integer('magazine_id')->nullable()->unsigned()->index();
             $table->integer('conference_id')->nullable()->unsigned()->index();
+            $table->integer('classification_id')->nullable()->unsigned()->index();
        //   $table->string('publish_place');
             $table->timestamp('published_at');
             $table->timestamps();
             $table->softDeletes();
             
+            $table->foreign('classification_id')->references('id')->on('classificationS');
             $table->foreign('college_id')->references('id')->on('colleges');
             $table->foreign('department_id')->references('id')->on('departments');
             $table->foreign('magazine_id')->references('id')->on('magazines');
