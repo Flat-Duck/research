@@ -23,5 +23,8 @@ $factory->define(App\Paper::class, function (Faker $faker) {
         'conference_id' => function () {
             return factory(App\Conference::class)->create()->id;
         },
+        'classification_id' => function () {
+            return factory(App\Classification::class)->create()->id;
+        },
     ];
 });
