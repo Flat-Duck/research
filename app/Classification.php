@@ -30,6 +30,14 @@ class Classification extends Model
         ];
     }
 
+        /**
+     * Get the papers for the Teacher.
+     */
+    public function papers()
+    {
+        return $this->hasMany('App\Paper');
+    }
+
     /**
      * Returns the paginated list of resources
      *

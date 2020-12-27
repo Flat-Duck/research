@@ -335,7 +335,7 @@
 
         <div class="pageNumbers">
             <ul>
-                {{ $papers->links('vendor.pagination.default') }}
+                {{-- {{ $papers->links('vendor.pagination.default') }} --}}
             </ul>
         </div>
 

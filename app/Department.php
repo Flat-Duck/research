@@ -38,13 +38,13 @@ class Department extends Model
         return $this->hasMany('App\Teacher');
     }
 
-    /**
-     * Get the papers for the Department.
-     */
-    public function papers()
-    {
-        return $this->hasMany('App\Paper');
-    }
+    // /**
+    //  * Get the papers for the Department.
+    //  */
+    // public function papers()
+    // {
+    //     return $this->hasMany('App\Paper');
+    // }
 
     /**
      * Get the colleges for the Department.
